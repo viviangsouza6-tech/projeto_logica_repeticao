@@ -66,7 +66,7 @@ for(let elemento of presentes){
 const divForeach = document.querySelector('#div-foreach')
 
 presentes.forEach((elemento, posicao)=>{
-    divForeach.innerHTML +=`${posicao}` - `${elemento} <br>`
+    divForeach.innerHTML += `${posicao} - ${elemento} <br>`
 })
 
 const pessoas = [
@@ -75,7 +75,11 @@ const pessoas = [
     {nome: 'Taoca', idade : 28, renda:500},
     {nome: 'Chicó', idade : 26, renda:100},
     {nome: 'João Grilo', idade : 32, renda:80},
-    
-
-    
+       
 ]
+//LISTANDO OBJETO LITERAL PELO FOR 
+const divListaObjFor = document.querySelector('#div-listado-for')
+
+for(i = 0; i < pessoas.length;i++){
+    divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade}, ${pessoas[i].renda.toFixed(2).replace('.',',')} <br>`
+}
