@@ -91,7 +91,7 @@ const pessoas = [
 
 ]
 
-//listando objeto literal pelo for
+//listando objeto literal pelo forin
 const divlistobjfor = document.querySelector('#div-listaobj-for')
 
 for(i = 0; i < pessoas.length;i++){
@@ -104,6 +104,26 @@ const divlistobjforin = document.querySelector('#div-listaobj-forin')
 for(let indice in pessoas){
     divlistobjforin.innerHTML +=`${indice} - ${pessoas[indice].nome}, ${pessoas[indice].idade}, R$ ${pessoas[indice].renda.toFixed(2).replace('.',',')} <br>`
 }
+
+//lista objeto literal for of
+const divlistobjforof = document.querySelector('#div-listaobj-forof')
+
+let contforof = 0
+
+for(let elem of pessoas){
+    contforof++
+
+    divlistobjforof.innerHTML += `${contforof} - ${elem.nome}, ${elem.idade}, R$ ${elem.renda.toFixed(2).replace('.',',')}<br>`
+
+}
+
+//lista objeto literal pelo foreach
+const divlistobjforeach = document.querySelector('#div-listaobj-foreach')
+
+pessoas.forEach((elem, i)=>{
+    divlistobjforeach.innerHTML += `${i + 1} - ${elem.nome}, ${elem.idade} R$ ${elem.renda.toFixed(2).replace('.',',')} <br>`
+
+})
 
 
 
